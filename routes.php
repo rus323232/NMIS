@@ -25,7 +25,6 @@
                 $handler->closeInfoFile();
             }
         } else {
-
             if (isset($_POST['ip'])) {
                 $handler = new InfoFileHandler($pathToFile, "w+");
                 $handler->writeInfoFile($_POST);
@@ -40,7 +39,6 @@
         $file = $fileDirectory . $removeIP . "/" . $filesName;
 
         if (is_dir($fileDirectory . $removeIP)) {
-
             if (is_file($file)) {
                 unlink($file);
                 rmdir($fileDirectory . $removeIP);
@@ -50,6 +48,8 @@
                 rmdir($fileDirectory . $removeIP);
                 include_once './view/home.php';
             }
+        } else {
+            include_once './view/home.php';
         }
     }
     else {

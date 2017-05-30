@@ -8,16 +8,7 @@
     <title>Добавить информацию об устройстве</title>
     <link rel="stylesheet" href="./frontend/bootstrap-3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./frontend/bootstrap-3.3.7/css/bootstrap-theme.css">
-    <style>
-        a.dismiss {
-            display: inline-block;
-            background: #f2f1f0;
-            color: #333;
-        }
-        a.dismiss:hover {
-            background: #ffffff;
-        }
-    </style>
+
 </head>
 <body>
 <div class="container">
@@ -80,11 +71,11 @@
                 <div class="row">
                     <div class="wrap" style="text-align: right">
                         <div class="col-md-6">
-                            <a class="dismiss btn btn-secondary" href="<?php echo $hostName ?>" style="display: inline-block">Отмена</a>
+                            <button type="button" class="cancel btn btn-primary">Отмена</button>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <button type="submit" class="btn btn-secondary">Создать</button>
+                        <button type="submit" class="btn btn-primary">Создать</button>
                     </div>
                 </div>
 
@@ -95,6 +86,16 @@
     </div>
 </div>
 
+<script src="./frontend/jquery-3.2.1.min.js"></script>
 <script src="./frontend/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $('button.cancel').click(function () {
+        location.href="<?php echo $hostName ?>";
+    });
+    $('input[name="ports"]').on("keyup change", function () {
+        var maxPortsCount = $(this).val();
+        $('input[name="in"], input[name="out"]').attr('max', maxPortsCount);
+    });
+</script>
 </body>
 </html>

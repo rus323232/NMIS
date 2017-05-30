@@ -110,7 +110,7 @@
         $('#removeUnitModal h5 span').html(ip);
         $('#removeUnitModal input').attr('value', ip);
     });
-    $('input[name="unitIP"]').mask("", {placeholder: "xxx.xxx.xxx.xxx " });
+    $('input[name="unitIP"]').ipmask();
 </script>
 </body>
 </html>
