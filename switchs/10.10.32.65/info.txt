@@ -1,0 +1,8 @@
+name|sw041
+model|D-Link DES 1098923123123123123123123
+ip|10.10.32.65
+location|7 этаж Конференц. залss
+ports|33
+in|20
+out|1
+comments|fff

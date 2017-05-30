@@ -1,0 +1,9 @@
+Name     | sw048
+Model    | D-Link DES0808 
+IP       | 10.102.0.48
+Location | 3 этаж, 21 корпус, УГМех
+Ports    | 28
+In       | 28
+Out      | 1
+Vlan     | [1, 5, 4, 8]
+Comments | Сука глючный
