@@ -53,13 +53,13 @@
                 <div class="form-group row">
                     <label for="example-number-input" class="col-2 col-form-label">Входящий порт</label>
                     <div class="col-10">
-                        <input class="form-control" type="number" min="0" name="in" id="example-number-input">
+                        <input class="form-control" type="number" min="1" name="in" id="example-number-input">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-number-input" class="col-2 col-form-label">Исходящий порт</label>
                     <div class="col-10">
-                        <input class="form-control" type="number" min="0" name="out" id="example-number-input">
+                        <input class="form-control" type="number" min="1" name="out" id="example-number-input">
                     </div>
                 </div>
                 <div class="form-group row">

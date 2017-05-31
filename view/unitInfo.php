@@ -64,9 +64,9 @@
                                 <label for="example-number-input" class="col-2 col-form-label">Количество портов</label>
                                 <input class="form-control" type="number" min="0" name="ports" value="<?php echo $handler->getUnitProp('ports')?>" id="example-number-input">
                                 <label for="example-number-input" class="col-2 col-form-label">Входящий порт</label>
-                                <input class="form-control" type="number" name="in" min="0" value="<?php echo $handler->getUnitProp('in')?>" id="example-number-input">
+                                <input class="form-control" type="number" name="in" min="1" value="<?php echo $handler->getUnitProp('in')?>" id="example-number-input">
                                 <label for="example-number-input" class="col-2 col-form-label">Исходящий порт</label>
-                                <input class="form-control" type="number" name="out" min="0" value="<?php echo $handler->getUnitProp('out')?>" id="example-number-input">
+                                <input class="form-control" type="number" name="out" min="1" value="<?php echo $handler->getUnitProp('out')?>" id="example-number-input">
                                 <label for="example-number-input" class="col-2 col-form-label">Комментарии </label>
                                 <input class="form-control" type="text" name="comments" value="<?php echo $handler->getUnitProp('comments')?>" id="example-text-input">
                             </div>
@@ -92,7 +92,10 @@
     $('button.updateUnit').click(function () {
         $('#updateUnitModal').modal();
     });
-
+    $('input[name="ports"]').on("keyup change", function () {
+        var maxPortsCount = $(this).val();
+        $('input[name="in"], input[name="out"]').attr('max', maxPortsCount);
+    });
 </script>
 </body>
 </html>

@@ -3,6 +3,11 @@
 
     $fileDirectory = strlen ($filesPath) > 1? $_SERVER['DOCUMENT_ROOT']. "/" .$filesPath. "/" : $_SERVER['DOCUMENT_ROOT']. "/";
 
+    if (!is_dir($fileDirectory)) {
+        echo "File directory is not exist";
+        exit();
+    }
+
     if (isset($_GET['unitIP'])) {
         $unitIP = $_GET['unitIP'];
         $dir = $fileDirectory . $unitIP;

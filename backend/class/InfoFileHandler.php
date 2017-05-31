@@ -22,7 +22,7 @@ class InfoFileHandler {
                 if (filesize($filePath) > 0) {
                     $this->setParams();
                 } else {
-                     echo "Info file is empty";
+                     echo "Info file is empty, yet";
                 }
             } else {
                 throw new Exception('Error with open .txt file');
